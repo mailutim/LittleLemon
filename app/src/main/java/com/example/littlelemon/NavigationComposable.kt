@@ -10,7 +10,7 @@ import androidx.navigation.compose.NavHost
 @Composable
 fun NavigationComposable(navController: NavHostController){
     val hasUserData = hasUserDataInSharedPreference()
-    NavHost(navController = navController, startDestination = if (hasUserData) OnboardDestination.route else HomeDestinations.route ){
+    NavHost(navController = navController, startDestination = if (hasUserData) OnboardDestination.route else HomeDestination.route ){
 
     }
 }
