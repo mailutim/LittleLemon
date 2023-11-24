@@ -9,6 +9,6 @@ object HomeDestination : Destinations{
 object ProfileDestinations : Destinations{
     override val route = "Profile"
 }
-object OnboardDestination : Destinations {
+object OnboardingDestination : Destinations {
     override val route = "Onboarding"
 }
