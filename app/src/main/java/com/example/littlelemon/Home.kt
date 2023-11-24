@@ -18,6 +18,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -33,6 +34,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -113,13 +115,14 @@ fun HeroSection(menuItemsLocal: List<MenuItemRoom>) {
                 onValueChange = { searchPhrase = it },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(start = 50.dp, end = 50.dp)
+                    .padding(start = 10.dp, end = 10.dp)
                     .background(LittleLemonColor.cloud),
                 leadingIcon = {
                     Icon(
                         Icons.Default.Search, contentDescription = "Search"
                     )
-                },
+                }
+
             )
             if (searchPhrase.isNotEmpty()) {
                 menuItems =
@@ -150,33 +153,37 @@ fun HeroSection(menuItemsLocal: List<MenuItemRoom>) {
                 Button(
                     onClick = {
                         selectedCategory = "starters"
-                    }, modifier = Modifier.height(40.dp)
+                    }, modifier = Modifier.height(40.dp),
+                    colors = ButtonDefaults.buttonColors(Color(0xfff4ce14))
                 ) {
-                    Text(text = "Starters", style = MaterialTheme.typography.bodyMedium)
+                    Text(text = "Starters", style = MaterialTheme.typography.bodyMedium, color = Color.Black)
                 }
 
                 Button(
                     onClick = {
                         selectedCategory = "mains"
-                    }, modifier = Modifier.height(40.dp)
+                    }, modifier = Modifier.height(40.dp),
+                    colors = ButtonDefaults.buttonColors(Color(0xfff4ce14))
                 ) {
-                    Text(text = "Mains", style = MaterialTheme.typography.bodyMedium)
+                    Text(text = "Mains", style = MaterialTheme.typography.bodyMedium, color = Color.Black)
                 }
 
                 Button(
                     onClick = {
                         selectedCategory = "desserts"
-                    }, modifier = Modifier.height(40.dp)
+                    }, modifier = Modifier.height(40.dp),
+                    colors = ButtonDefaults.buttonColors(Color(0xfff4ce14))
                 ) {
-                    Text(text = "Desserts", style = MaterialTheme.typography.bodyMedium)
+                    Text(text = "Desserts", style = MaterialTheme.typography.bodyMedium, color = Color.Black)
                 }
 
                 Button(
                     onClick = {
                         selectedCategory = "drinks"
-                    }, modifier = Modifier.height(40.dp)
+                    }, modifier = Modifier.height(40.dp),
+                    colors = ButtonDefaults.buttonColors(Color(0xfff4ce14))
                 ) {
-                    Text(text = "Drinks", style = MaterialTheme.typography.bodyMedium)
+                    Text(text = "Drinks", style = MaterialTheme.typography.bodyMedium, color = Color.Black)
                 }
             }
             if (selectedCategory.isNotEmpty()) {
